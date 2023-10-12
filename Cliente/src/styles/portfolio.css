@@ -1,0 +1,136 @@
+.portfolio-container{
+    background: linear-gradient(to bottom,#305A5C, #50A0FF);
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.data-container{
+    display: flex;
+    justify-content: center;
+}
+
+.box-container{
+    border: 2.5px solid #C0C0C0;
+    height: 333px;
+    width: 333px;
+    background-color: #2C5255 transparent;
+    color: #ffff;
+    opacity: 0;
+    position: relative;
+    margin: 50px 50px;
+}
+
+.box-container h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-size: 26px;
+}
+
+.box-container h3{
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 1.5;
+    padding: 20px;
+    font-family: 'Roboto Mono', sans-serif;
+}
+
+#moon-container {
+    position: relative;
+    width: 100px; /* Tamaño del sol */
+    height: 100px; /* Tamaño del sol */
+    background: radial-gradient(circle at center,#E5E5E5, transparent 70%);
+    border-radius: 50%; /* Forma redonda para el sol */
+    pointer-events: none; /* Para que el sol no interfiera con los elementos debajo */
+    /*transform: translate(-50%, -50%); /* Centra el sol en el cursor */
+    transition: transform 1s ease, box-shadow 2s ease;/* Transición suave para seguir al cursor */
+    right: 629px;
+    top: -98.5vh;
+    z-index: 990;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    /*animation: moonFrame 300s forwards;*/
+  }
+
+.logos{
+    /*border: 2px solid #C0C0C0;*/
+    height: 100px;
+    width: 89%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.box-visible{
+    opacity: 1;
+    transition: .5s ease-in-out .8s;
+    
+
+    animation: box1 .5s forwards;
+}
+
+.box-invisible{
+    animation:  unbox1 .5s forwards;
+}
+
+.box-visible2{
+    opacity: 1;
+    transition: .8s ease-in-out .8s;
+    
+
+    animation: box1 .8s forwards;
+}
+
+.box-invisible2{
+    animation:  unbox1 .8s forwards;
+}
+
+
+.box-visible3{
+    opacity: 1;
+    transition: 1s ease-in-out .8s;
+    
+
+    animation: box1 1s forwards;
+}
+
+.box-invisible3{
+    animation:  unbox1 1s forwards;
+}
+  @keyframes moonFrame{
+    0%{
+        right: 750px;
+    }
+    100%{
+        right: 100px;
+    }
+  }
+
+  @keyframes box1{
+    0%{
+        opacity: 0;
+        bottom: -20vh;
+    }
+    100%{
+        opacity: 1;
+        bottom: 0;
+    }
+  }
+
+  @keyframes unbox1{
+    0%{
+        opacity: 1;
+        bottom: 0vh;
+    }
+    100%{
+        opacity: 0;
+        bottom: 20vh;
+    }
+  }

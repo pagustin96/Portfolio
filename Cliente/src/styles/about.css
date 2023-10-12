@@ -1,0 +1,340 @@
+.about-container{
+    background: linear-gradient(to bottom,  #10151D, #305A5C);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    z-index: -3;
+}
+
+.h2-cont{
+    font-size: 65px;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 20px;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: 1s ease-in-out all;
+}
+
+.visible{
+    opacity: 1;
+    transform: scale(1);
+}
+
+.half-container{
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+}
+
+.img-perfil-container{
+    height: auto;
+    width: 40vw;
+    margin-top: 40px;
+    z-index: 990;
+    display: flex;
+    justify-content: center;
+}
+
+.img-perfil{
+    margin-top: 25px;
+    z-index: 990;
+    height: 350px;
+    width: 350px;
+    margin-left: 50px;
+    opacity: 0;
+    position: relative;
+    border: 1px solid #2E3C51;
+    border-radius:50%;
+    background: radial-gradient(circle, #131F33, #10151D );
+    box-shadow:  1px 1px 1px rgba(0, 0, 0, 0.9), /* Sombra más oscura */
+    0px 2px 1px rgba(0, 0, 0, 0.9),
+    1px 3px 1px rgba(0, 0, 0, 0.9),
+    1px 4px 1px rgba(0, 0, 0, 0.9),
+    1px 5px 1px rgba(0, 0, 0, 0.9),
+
+    1px 18px 6px rgba(16, 16, 16, .4),
+    1px 22px 10px rgba(16, 16, 16, .5),
+    1px 25px 35px rgba(16, 16, 16, .5),
+    1px 30px 60px rgba(16, 16, 16, .5);
+}
+
+.img-perfil:hover{
+    border-radius: 0%;
+}
+
+.img-visible{
+    opacity: 1;
+    transition: .8s ease-in-out .8s;
+    
+
+    animation: fade .8s forwards;
+}
+
+.img-invisible{
+    animation:  unfade .8s forwards;
+}
+
+@keyframes fade{
+    0%{
+        left: -7vw;
+        opacity: 0;
+    }
+
+    100%{
+        left: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes unfade{
+    0%{
+        left: 0;
+        opacity: 1;
+    }
+    100%{
+        left: -7vw;
+        opacity: 0;
+    }
+}
+
+.exp-perfil-container{
+    height: auto;
+    width: 60vw;
+    margin-top: 40px;
+    z-index: 990;
+    display: flex;
+    justify-content: center;
+}
+
+.expertise-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #2E3C51;
+    min-height: 350px;
+    max-height: 400px;
+    width: 48vw;
+    margin-right: 10px;
+    background-color: #10151D;
+    color: #fff;
+    position: relative;
+    z-index: 999;
+}
+
+.expertise-container h3{
+    margin-top: 10px;
+    font-size: 26px;
+}
+
+.expertise-container p{
+    display: flex;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    margin: 10px 15px;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #808C9C;
+}
+
+.dot5{
+    width: 3px;
+    height: 4px;
+    
+    background: #fff;
+    opacity: .1;
+
+    position: absolute;
+    bottom: -150;
+    z-index: 0;
+
+    animation: dots5 2s linear infinite;
+}
+
+.dot6{
+    width: 3px;
+    height: 4px;
+    
+    background: #fff;
+    opacity: .1;
+
+    position: absolute;
+    bottom: -150;
+    z-index: 0;
+
+    animation: dots6 2s linear infinite;
+}
+
+.dot7{
+    width: 3px;
+    height: 4px;
+    
+    background: #fff;
+    opacity: .1;
+
+    position: absolute;
+    bottom: -150;
+    z-index: 0;
+
+    animation: dots7 2s linear infinite;
+}
+
+.dot8{
+    width: 3px;
+    height: 4px;
+    
+    background: #fff;
+    opacity: .1;
+
+    position: absolute;
+    bottom: -150;
+    z-index: 0;
+
+    animation: dots8 2s linear infinite;
+}
+
+@keyframes dots5{
+    0%{
+        bottom: -100vh;
+        opacity: 0;
+    }
+    100%{
+        bottom: -75vh;
+        opacity: .25;
+    }
+}
+
+@keyframes dots6{
+    0%{
+        bottom: -75vh;
+        opacity: .25;
+    }
+    100%{
+        bottom: -50vh;
+        opacity: .5;
+    }
+}
+
+@keyframes dots7{
+    0%{
+        bottom: -50vh;
+        opacity: .5;
+    }
+    100%{
+        bottom: -25vh;
+        opacity: .75;
+    }
+}
+
+@keyframes dots8{
+    0%{
+        bottom: -25vh;
+        opacity: .75;
+    }
+    100%{
+        bottom: 0vh;
+        opacity: .75;
+    }
+}
+
+.rocket{
+    position: absolute;
+    opacity: 1;
+    height: 50px;
+    width: 50px;
+    background-image: url('/public/img/ovni-bg.png');
+    animation: rocket 15s forwards;
+    z-index: 999;
+}
+
+@keyframes rocket{
+    0%{
+        bottom: -20vh;
+        left: 12vw;
+        opacity: 1;
+        transform: scale(.1);
+    }
+    25%{
+        bottom: -15vh;
+        left: 50vw;
+        opacity: 1;
+        transform: scale(1);
+    }
+    35%{
+        bottom: -23vh;
+        left: 50vw;
+    }
+    50%{
+        bottom: -23vh;
+        left: 95vw;
+        opacity: 1;
+    }
+    75%{
+        bottom: -33vh;
+        left: 95vw;
+    }
+    100%{
+        bottom: -40vh;
+        left: 10vw;
+        opacity: 1;
+    }
+}
+
+@keyframes rocket-float{
+    0%{
+        bottom: -40vh;
+        left: 10vw;
+        z-index: 999;
+        transform: scale(1);
+    }
+    25%{
+        bottom: -20vh;
+        left: 15vw;
+        z-index: 980;
+        transform: scale(.5);
+    }
+    50%{
+        bottom: -20vh;
+        left: 40vw;
+        transform: scale(1);
+        
+    }
+    75%{
+        bottom: -30vh;
+        left: 25vw;
+        transform: scale(1.5);
+        z-index: 999;
+    }
+    100%{
+        bottom: -40vh;
+        left: 10vw;
+        z-index: 999;
+        transform: scale(1);
+    }
+}
+
+@keyframes rocket-click{
+    0%{
+        bottom: -22.5vh;
+        left: 10vw;
+    }
+    75%{
+        bottom: -20vh;
+        left: 100%;
+        transform: scale(0.5);
+        opacity: .0;
+    }
+    76%{
+        left: 0;
+    }
+    100%{
+        bottom: -20vh;
+        left: 10vw;
+        opacity: 1;
+    }
+}

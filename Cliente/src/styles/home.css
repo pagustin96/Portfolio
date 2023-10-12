@@ -1,0 +1,323 @@
+* { 
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    cursor: url('/public/img/cursor-rocket.png'), auto;
+}
+
+.home-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    perspective: 1000px;
+    background-color: #10151D;
+    background: linear-gradient(to bottom, #141519, #10151D);
+    height: 100vh;
+    max-width: 100vw;
+    width: 100vw;
+}
+
+.btn-contact{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 16px;
+    font-family: "Google Sans Display", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 700;
+    margin-right: 10px;
+    height: 50px;
+    width: 150px;
+    background-color: #a87ffb;
+    color: #10151d;
+    border-radius: 60px;
+    border: none;
+    box-shadow:  1px 18px 6px rgba(16, 16, 16, .4),
+    1px 22px 10px rgba(16, 16, 16, .5);  
+    z-index: 991;
+    transition: background-color 1s ease, transform 0.5s ease-in-out;
+    animation: floatAnimation 1.1s ease-in-out infinite alternate;
+    cursor: pointer;
+}
+
+.btn-contact:hover {
+    /* ... (tu estilo actual en el estado :hover) */
+    background-color: #fff;
+}
+
+.btn-explore{
+    position: absolute;
+    top: 20px;
+    right: 200px;
+    font-size: 16px;
+    font-family: "Google Sans Display", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 700;
+    margin-right: 10px;
+    height: 50px;
+    width: 170px;
+    background-color: #1E1F33;
+    color: #B8BCD2;
+    border-radius: 60px;
+    border: none;
+    box-shadow:  1px 18px 6px rgba(16, 16, 16, .4),
+    1px 22px 10px rgba(16, 16, 16, .5);  
+    z-index: 991;
+    transition: background-color 1s ease, transform 0.5s ease-in-out;
+    animation: floatAnimation 1.1s ease-in-out infinite alternate;
+    cursor: pointer;
+}
+
+.btn-explore:hover {
+    /* ... (tu estilo actual en el estado :hover) */
+    border: 1px solid #a87ffb;
+}
+
+.wrapper{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+}
+
+.ticket{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:  white;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 10px;  
+}
+
+.texto-h1 {
+    color: #C0C0C0;
+    font-size: 60px;
+    margin: 10px 0;
+    position: relative;
+    font-family: Verdana, sans-serif;
+    transition: text-shadow .1s, transform .1s;
+    text-shadow:     1px 1px 1px rgba(0, 0, 0, 0.9), /* Sombra más oscura */
+    0px 2px 1px rgba(0, 0, 0, 0.9),
+    1px 3px 1px rgba(0, 0, 0, 0.9),
+    1px 4px 1px rgba(0, 0, 0, 0.9),
+    1px 5px 1px rgba(0, 0, 0, 0.9),
+
+    1px 18px 6px rgba(16, 16, 16, .4),
+    1px 22px 10px rgba(16, 16, 16, .5),
+    1px 25px 35px rgba(16, 16, 16, .5),
+    1px 30px 60px rgba(16, 16, 16, .5);
+    
+    
+}
+
+.texto-h1.loaded {
+    font-size: 60px; /* Tamaño de fuente deseado */
+}
+
+.texto-h3 {
+    pointer-events: all;
+    color: #C0C0C0;
+    font-size: 5px;
+    text-shadow:     1px 1px 1px rgba(0, 0, 0, 0.9), /* Sombra más oscura */
+    0px 2px 1px rgba(0, 0, 0, 0.9),
+    1px 3px 1px rgba(0, 0, 0, 0.9),
+    1px 4px 1px rgba(0, 0, 0, 0.9),
+
+    1px 18px 6px rgba(16, 16, 16, .4),
+    1px 22px 10px rgba(16, 16, 16, .5),
+    1px 25px 35px rgba(16, 16, 16, .5),
+    1px 30px 60px rgba(16, 16, 16, .5);
+    transition: font-size 1s ease;
+    z-index: 990;
+}
+
+.texto-h3.loaded{
+    font-size: 30px;
+}
+
+.bg-style{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 990;
+}
+
+.dot{
+    width: 3px;
+    height: 4px;
+    
+    background: #fff;
+    opacity: .1;
+
+    position: absolute;
+    bottom: -150;
+    z-index: -2;
+
+    animation: dots 2s linear infinite;
+}
+
+.dot2{
+    width: 3px;
+    height: 4px;
+    
+    background: #fff;
+    opacity: .1;
+
+    position: absolute;
+    bottom: -150;
+    z-index: -2;
+
+    animation: dots2 2s linear infinite;
+}
+
+.dot3{
+    width: 3px;
+    height: 4px;
+    
+    background: #fff;
+    opacity: .1;
+
+    position: absolute;
+    bottom: -150;
+    z-index: -2;
+
+    animation: dots3 2s linear infinite;
+}
+
+.dot4{
+    width: 3px;
+    height: 4px;
+    
+    background: #fff;
+    opacity: .1;
+
+    position: absolute;
+    bottom: -150;
+    z-index: -2;
+
+    animation: dots4 2s linear infinite;
+}
+
+@keyframes dots{
+    0%{
+        bottom: 0vh;
+        opacity: .75;
+    }
+    100%{
+        bottom: 25vh;
+        opacity: .75;
+    }
+}
+
+@keyframes dots2{
+    0%{
+        bottom: 25vh;
+        opacity: .75;
+    }
+    100%{
+        bottom: 50vh;
+        opacity: .75;
+    }
+}
+
+@keyframes dots3{
+    0%{
+        bottom: 50vh;
+        opacity: .85;
+    }
+    100%{
+        bottom: 75vh;
+        opacity: .85;
+    }
+}
+
+@keyframes dots4{
+    0%{
+        bottom: 75vh;
+        opacity: .85;
+    }
+    100%{
+        bottom: 100vh;
+        opacity: 1;
+    }
+}
+
+@keyframes floatAnimationText {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-20px); /* Cambia esto para ajustar la altura de la flotación */
+    }
+}
+
+@keyframes floatAnimation {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-10px); /* Cambia esto para ajustar la altura de la flotación */
+    }
+}
+
+#sun-container {
+    position: absolute;
+    width: 200px; /* Tamaño del sol */
+    height: 200px; /* Tamaño del sol */
+    background: radial-gradient(circle at center,#10151D, #ffdb4d);
+    border-radius: 50%; /* Forma redonda para el sol */
+    pointer-events: none; /* Para que el sol no interfiera con los elementos debajo */
+    transform: translate(-50%, -50%); /* Centra el sol en el cursor */
+    transition: transform 3s ease, box-shadow 2s ease;/* Transición suave para seguir al cursor */
+    left: 0;
+    top: 0;
+    z-index: -1;
+  }
+
+  /* Estilos para la barra de desplazamiento */
+/* Barra de desplazamiento vertical */
+::-webkit-scrollbar {
+    width: 8px; /* Ancho de la barra de desplazamiento */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0); /* Color de fondo de la pista de la barra de desplazamiento */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #888; /* Color del 'pulgarcito' de la barra de desplazamiento */
+    border-radius: 6px; /* Radio de borde del 'pulgarcito' */
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color del 'pulgarcito' cuando se pasa el cursor sobre él */
+  }
+
+.toTop{
+    position: fixed;
+    right: 20px;
+    bottom: 30px;
+    height: 50px;
+    width: 50px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 6px;
+    z-index: 999;
+    border-radius: 50%;
+}
+
+.toTop:hover{
+    box-shadow: 5px 5px 5px black;
+}
+
