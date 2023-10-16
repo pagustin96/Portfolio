@@ -98,7 +98,7 @@ export const About = () => {
       <div className='' id='rocket'></div>
       <div className='half-container'>
         <div className='img-perfil-container' id='img-perfil-contenedor'>
-          <img src="/img/perfil_bg.png" alt="perfil-img" className='img-perfil' id='img-perfil' data-animation='fade' />
+          <img src="/Portfolio/build/img/perfil_bg.png" alt="perfil-img" className='img-perfil' id='img-perfil' data-animation='fade' />
         </div>
         <div className='exp-perfil-container' id='img-perfil-contenedor'>
           <div className='expertise-container'id='expertise'>
