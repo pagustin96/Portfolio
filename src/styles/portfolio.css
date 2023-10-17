@@ -134,3 +134,15 @@
         bottom: 20vh;
     }
   }
+
+  @media (max-width:800px) {
+    .portfolio-container{
+        display:  inline-block;
+        height: auto;
+    }
+    .data-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+  }

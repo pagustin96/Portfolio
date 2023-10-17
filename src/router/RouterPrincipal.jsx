@@ -13,9 +13,9 @@ export const RouterPrincipal = () => {
 <>
     <Home />
     <About  />
-    <TopBottom />
     <Portfolio />
     <Contact/>
+    <TopBottom />
 </>
         
 

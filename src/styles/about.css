@@ -116,8 +116,6 @@
     flex-direction: column;
     align-items: center;
     border: 1px solid #2E3C51;
-    min-height: 350px;
-    max-height: 400px;
     width: 48vw;
     margin-right: 10px;
     background-color: #10151D;
@@ -336,5 +334,48 @@
         bottom: -20vh;
         left: 10vw;
         opacity: 1;
+    }
+}
+
+@media (max-width: 800px) {
+    .about-container{
+        height: 150vh;
+    }
+    .half-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .img-perfil-container{
+        margin-top: 250px;
+    }
+    .exp-perfil-container{
+        width: 100vw;
+        height: auto;
+        display: flex;
+        justify-content: center;
+    }
+    .expertise-container{
+        width: 90vw;
+        height: auto;
+        margin: 0px;
+    }
+}
+
+@media (max-width: 670px) {
+    .about-container{
+        height: 220vh;
+    }
+    .half-container{
+        height: auto;
+    }
+    .exp-perfil-container{
+        height: 100vh;
+    }
+    .expertise-container{
+        height: 100vh;
+    }
+    .img-perfil-container{
+        margin-top: 50px;
     }
 }

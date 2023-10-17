@@ -94,27 +94,35 @@ document.addEventListener('mousemove', (event) => {
   // Obtiene las coordenadas del mouse
   const mouseX = event.clientX;
   const mouseY = event.clientY;
+  
+  if (window.innerWidth > 700){
+      // Calcula la posición del sol basada en las coordenadas del mouse
+    const sunPositionX = mouseX / width
+    const sunPositionY = mouseY / height
 
-  // Calcula la posición del sol basada en las coordenadas del mouse
-  const sunPositionX = mouseX / width
-  const sunPositionY = mouseY / height
+    // Actualiza el fondo del contenedor del sol con el gradiente radial
+    sunContainer.style.background = `radial-gradient(circle at ${sunPositionX * 100}% ${sunPositionY * 100}%, #fff 0.5%, #ffdb4d 5%, transparent 70%)`;
+    sunContainer.style.transform = `translate(${mouseX}px, ${mouseY}px) translate(-50%, -50%)`;
 
-  // Actualiza el fondo del contenedor del sol con el gradiente radial
-  sunContainer.style.background = `radial-gradient(circle at ${sunPositionX * 100}% ${sunPositionY * 100}%, #fff 0.5%, #ffdb4d 5%, transparent 70%)`;
-  sunContainer.style.transform = `translate(${mouseX}px, ${mouseY}px) translate(-50%, -50%)`;
+    // Calcula la posición de la sombra para seguir el cursor 
+      //background: radial-gradient(circle at center,#10151D, #ffdb4d);
+    const shadowX = mouseX / width
+    const shadowY = mouseY /height
+    
+    // Ajusta la sombra en función de la posición del cursor
+    sunContainer.style.boxShadow = `${shadowX}px ${shadowY}px 100px rgba(255, 255, 0, 0.5)`;
+  }else{
+    // Si el ancho de la pantalla es menor a 700px, solo permitir que el sol flote
+    sunContainer.style.background = 'radial-gradient(circle at center, #fff 0.5%, #ffdb4d 5%, transparent 70%)';
+    sunContainer.style.transform = 'translate(0, 0)';
+    sunContainer.style.boxShadow = 'none';
+  }
 
-   // Calcula la posición de la sombra para seguir el cursor 
-    //background: radial-gradient(circle at center,#10151D, #ffdb4d);
-   const shadowX = mouseX / width
-   const shadowY = mouseY /height
-   
-   // Ajusta la sombra en función de la posición del cursor
-   sunContainer.style.boxShadow = `${shadowX}px ${shadowY}px 100px rgba(255, 255, 0, 0.5)`;
 });}
 
-const scrollToComponentInferior = () => {
+const scrollToComponentInferior = (el) => {
   // Buscamos el elemento del componente inferior utilizando un ID o una referencia
-  const componenteInferior = document.getElementById('about');
+  const componenteInferior = document.getElementById(el);
 
   // Verificamos si el elemento existe
   if (componenteInferior) {
@@ -125,7 +133,7 @@ const scrollToComponentInferior = () => {
 
   return (
   <div className='home-container' id='home'>
-    <div className='btn-contact-container' ><button className='btn-explore' onClick={scrollToComponentInferior}>Explora mi mundo</button><button className='btn-contact'>Contactame</button></div>
+    <div className='btn-contact-container' ><button className='btn-explore' onClick={() => scrollToComponentInferior('about')}>Explora mi mundo</button><button className='btn-contact' onClick={() => scrollToComponentInferior('contact')} >Contactame</button></div>
     <div className='wrapper' >
       <div className='ticket'>
      
