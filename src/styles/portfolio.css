@@ -135,7 +135,19 @@
     }
   }
 
-  @media (max-width:800px) {
+  @media (max-width: 1120px) {
+    .box-container{
+        margin: 30px 20px;
+    }
+  }
+
+  @media (max-width: 1100px) {
+    .box-container{
+        margin: 30px 0px;
+    }
+  }
+
+  @media (max-width:1000px) {
     .portfolio-container{
         display:  inline-block;
         height: auto;
