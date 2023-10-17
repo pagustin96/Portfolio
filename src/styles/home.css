@@ -4,7 +4,7 @@
 }
 
 body{
-    cursor: url('/public/img/cursor-rocket.png'), auto;
+    background-color: #10151D;
 }
 
 .home-container{
@@ -321,3 +321,25 @@ body{
     box-shadow: 5px 5px 5px black;
 }
 
+@media (max-width: 500px) {
+    .wrapper{
+        justify-content: center;
+        align-items: center;
+    }
+    .texto-h1{
+        display: flex;
+        font-size: 30px;
+        justify-content: center;
+        align-items: center;
+    }
+    .texto-h3{
+        display: flex;
+        font-size: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+    .texto-h3.loaded{
+        font-size: 20px;
+    }
+    
+}

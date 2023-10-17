@@ -379,3 +379,18 @@
         margin-top: 50px;
     }
 }
+
+@media (max-width:500px) {
+    .img-perfil{
+        height: 300px;
+        width: 300px;
+        margin: 0px;
+    }
+    .exp-perfil-container{
+        margin-top: 10px;
+        height: 110vh;
+    }
+    .expertise-container{
+        height: auto;
+    }
+}
