@@ -117,6 +117,7 @@ document.addEventListener('mousemove', (event) => {
   }else{
     // Si el ancho de la pantalla es menor a 700px, solo permitir que el sol flote
     sunContainer.style.display = 'none'
+    sunContainer.remove()
   }
 
 });}

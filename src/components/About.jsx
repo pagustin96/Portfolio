@@ -13,7 +13,10 @@ export const About = () => {
     observerImg.observe(img)
     //observerOvni.observe(ovni)
     observerExpertise.observe(expertise)
-    dotsGenerator('dots2')
+    if(window.innerWidth > 700){
+      dotsGenerator('dots2')
+    }
+    
 
     const rocketElement = document.getElementById('rocket');
     rocketElement.addEventListener('animationend', () => {
