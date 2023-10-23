@@ -7,11 +7,11 @@ export const About = () => {
   useEffect(()=>{
     const titulo = document.getElementById('h2-title')
     const img = document.getElementById('img-perfil')
-    const ovni = document.getElementById('rocket')
+    //const ovni = document.getElementById('rocket')
     const expertise = document.getElementById('expertise')
     observerTitle.observe(titulo)
     observerImg.observe(img)
-    observerOvni.observe(ovni)
+    //observerOvni.observe(ovni)
     observerExpertise.observe(expertise)
     dotsGenerator('dots2')
 
@@ -47,7 +47,7 @@ export const About = () => {
     })
   }
 
-  const cargarOvni = (entradas, observador) => {
+  /*const cargarOvni = (entradas, observador) => {
     entradas.forEach((entrada)=>{
       if(entrada.isIntersecting){
         entrada.target.classList.add('rocket')
@@ -55,7 +55,7 @@ export const About = () => {
         entrada.target.classList.remove('visible')
       }
     })
-  }
+  }*/
 
   const cargarExpertise = (entradas, observador) => {
     entradas.forEach((entrada)=>{
@@ -85,7 +85,7 @@ export const About = () => {
 
   const observerTitle = new IntersectionObserver(cargarTitulo, optionsTitle)
 
-  const observerOvni = new IntersectionObserver(cargarOvni, optionsTitle)
+  //const observerOvni = new IntersectionObserver(cargarOvni, optionsTitle)
 
   const observerExpertise = new IntersectionObserver(cargarExpertise, optionsImg)
 
