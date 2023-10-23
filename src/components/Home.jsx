@@ -114,11 +114,11 @@ document.addEventListener('mousemove', (event) => {
     
     // Ajusta la sombra en función de la posición del cursor
     sunContainer.style.boxShadow = `${shadowX}px ${shadowY}px 100px rgba(255, 255, 0, 0.5)`;
-  }else{
+  }/*else{
     // Si el ancho de la pantalla es menor a 700px, solo permitir que el sol flote
     sunContainer.style.display = 'none'
     sunContainer.remove()
-  }
+  }*/
 
 });}
 
@@ -147,7 +147,7 @@ const scrollToComponentInferior = (el) => {
     </div>
     <div className="dots">
     </div>
-    <div id="sun-container"></div>
+    {window.innerWidth > 700 ? <div id="sun-container"></div> : ''}
     
   </div>
   
